@@ -10,10 +10,3 @@ rm(data_complete)
 ## Dates conversion
 datetime <- paste(as.Date(data_req$Date), data_req$Time)
 data_req$Datetime <- as.POSIXct(datetime)
-
-## making Plot 1
-hist(data_req$Global_active_power, main="Global Active Power",xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
-
-## Saving to png
-dev.copy(png, file="plot1.png", height=480, width=480)
-dev.off()
